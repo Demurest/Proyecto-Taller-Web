@@ -11,6 +11,7 @@ exports.create = (req, res) => {
     titulo: req.body.titulo,
     ano : req.body.ano,
     //libro_pk: req.body.libro_pk
+    id_libro: req.body.id_libro
   };
 
   // Save Tutorial in the database
@@ -46,7 +47,7 @@ exports.create = (req, res) => {
     const id = req.params.id;
 
     Libro.update(req.body, {
-      where: { id: id }
+      where: { id_libro: id }
     })
       .then(num => {
         if (num == 1) {
@@ -70,7 +71,7 @@ exports.create = (req, res) => {
     const id = req.params.id;
 
     Libro.destroy({
-      where: { id: id }
+      where: { id_libro: id }
     })
       .then(num => {
         if (num == 1) {
