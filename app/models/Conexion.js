@@ -20,4 +20,6 @@ db.sequelize = sequelize;
 
 
 db.libro = require("./libro.model.js")(sequelize, Sequelize);
+
+const libro = db.libro;
 module.exports = db;

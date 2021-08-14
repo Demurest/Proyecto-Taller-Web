@@ -2,7 +2,8 @@ module.exports = (sequelize, Sequelize) => {
   const Libro = sequelize.define("libro", {
     id_libro:{
       type: Sequelize.INTEGER,
-      primaryKey:true 
+      primaryKey:true,
+      autoIncrement:true
     },
     autor: {
       type: Sequelize.STRING
@@ -13,9 +14,7 @@ module.exports = (sequelize, Sequelize) => {
     ano: {
       type: Sequelize.INTEGER
     },
-    /*libro_pk: {
-      type: Sequelize.CONSTRAINT
-    }*/
+
   });
 
   return Libro;
