@@ -6,7 +6,7 @@ module.exports = app => {
   // Create a new Tutorial
   router.post("/", libro.create);
   router.get("/", libro.findAll);
-  router.delete("/:id",libro.delete)
+  router.delete("/:id",libro.delete);
   router.put("/:id", libro.update);
 
  //duda aqui
