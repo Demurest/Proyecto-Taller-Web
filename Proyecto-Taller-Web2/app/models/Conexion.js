@@ -20,7 +20,10 @@ db.sequelize = sequelize;
 
 db.libro = require("./libro.model.js")(sequelize, Sequelize);
 db.persona = require("./persona.model.js")(sequelize, Sequelize);
+db.prestamo = require("./prestamo.model.js")(sequelize, Sequelize);
 
 
 const libro = db.libro;
+const persona = db.persona;
+const prestamo = db.prestamo;
 module.exports = db;

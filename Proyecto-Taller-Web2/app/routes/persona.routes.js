@@ -6,7 +6,7 @@ module.exports = app => {
     // Create a new Tutorial
     router.post("/", persona.create);
     router.get("/", persona.findAll);
-    router.delete("/:id",persona.delete)
+    router.delete("/:id",persona.delete);
     router.put("/:id", persona.update);
   
    //duda aqui
