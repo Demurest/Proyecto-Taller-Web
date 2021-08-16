@@ -6,15 +6,24 @@ module.exports = (sequelize, Sequelize) => {
         autoIncrement:true
       },
       fecha: {
-        type: Sequelize.TIMESTAMP
+        type: Sequelize.DATE
       },
       id_libro_libro: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+        model: 'libro',
+        key: 'id_libro',
+        }
       },
       id_persona_personas: {
-        type: Sequelize.INTEGER
-      }
-    });
+        type: Sequelize.INTEGER,
+        references: {
+        model: 'persona', // se refiere a la tabla persona
+        key: 'id_persona',
+        }
+      },
 
-    return prestamo;
+
+    },{freezeTableName: true,});
+    return Prestamo;
   };

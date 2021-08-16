@@ -1,5 +1,8 @@
 const db = require("../models/Conexion.js");//aqui
-const Prestamo = db.prestamo;
+const Prestamo = db.Prestamo;
+const Libro = db.libro;
+const Persona = db.persona;
+
 const Op = db.Sequelize.Op;
 
 exports.create = (req, res) => {
@@ -25,6 +28,20 @@ exports.create = (req, res) => {
       res.status(500).send({
         message:
           err.message || "Error al registra prestamo."
+      });
+    });
+};
+
+exports.findAll = (req, res) => {
+
+  Prestamo.findAll()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving personas."
       });
     });
 };

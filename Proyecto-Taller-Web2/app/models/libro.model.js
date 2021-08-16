@@ -13,9 +13,11 @@ module.exports = (sequelize, Sequelize) => {
     },
     ano: {
       type: Sequelize.INTEGER
-    },
+    }
 
-  });
+  },
+
+  {freezeTableName: true,});
 
   return Libro;
 };

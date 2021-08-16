@@ -190,6 +190,7 @@ const Listar = () =>{
   const options = {
     selectableRows: false
   };
+
   useEffect(() => {
 
   Listar();

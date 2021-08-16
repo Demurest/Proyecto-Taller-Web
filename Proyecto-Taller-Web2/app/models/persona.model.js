@@ -17,7 +17,8 @@ module.exports = (sequelize, Sequelize) => {
       /*id_persona: {
         type: Sequelize.CONSTRAINT
       }*/
-    });
+
+    },{freezeTableName: true,});
 
     return Persona;
   };

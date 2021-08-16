@@ -9,6 +9,7 @@ import Box from '@material-ui/core/Box';
 
 import Libros from './libro_form.js';
 import Persona from './persona_form.js';
+import Prestamo from './prestamo_form.js';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,7 +65,7 @@ export default function SimpleTabs() {
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label="Libros" {...a11yProps(0)} />
           <Tab label="Peronas" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Prestamo" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -74,7 +75,7 @@ export default function SimpleTabs() {
         <Persona />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Prestamo />
       </TabPanel>
     </div>
   );
